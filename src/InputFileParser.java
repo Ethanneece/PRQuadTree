@@ -38,6 +38,6 @@ public class InputFileParser {
 		File file = new File(inputFile);
 		Scanner scan = new Scanner(file);
 		
-		
+		return null;
 	}
 }

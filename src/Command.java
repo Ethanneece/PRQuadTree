@@ -5,9 +5,9 @@ public class Command {
 	
 	private String[] arguments; 
 	
-	public Command(String[] commands)
+	public Command(String name, String[] arguments)
 	{
-		this.name = commands[0]; 
-		this.arguments = 
+		this.name = name;
+		this.arguments = arguments;
 	}
 }
