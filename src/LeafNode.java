@@ -58,6 +58,6 @@ public class LeafNode extends Node {
 
     @Override
     public String toString() {
-        return null;
+        return "Leaf";
     }
 }

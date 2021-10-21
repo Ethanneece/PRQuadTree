@@ -70,9 +70,9 @@ public class PRQuadTree {
         return head;
     }
 
-    public void remove(Point point)
+    public Point remove(Point point)
     {
-        remove(point.getX(), point.getY());
+        return remove(point.getX(), point.getY());
     }
 
     public Point remove(int x, int y)
@@ -242,15 +242,7 @@ public class PRQuadTree {
         }
     }
 
-    public String dump()
+    public void dump()
     {
-        dumpHelper(head, worldBox, 0);
     }
-
-    private String dumpHelper(Node root, Rectangle region, int level)
-    {
-        String rtn = "".repeat
-        return "Node at " + region.commanFormat() + ":" + root.toString() + "\n" + dumpHelper();
-    }
-
 }

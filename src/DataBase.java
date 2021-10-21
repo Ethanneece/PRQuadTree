@@ -15,7 +15,8 @@ public class DataBase {
 	{
 		Point point = new Point(name, x, y);
 
-		if (point.isOutofBounds(rectangle))
+		Rectangle worldBox = new Rectangle(0, 0, 1024, 1024);
+		if (!worldBox.contains(point))
 		{
 			System.out.println("Point rejected: (" + point.toString() + ")");
 		}
@@ -54,16 +55,17 @@ public class DataBase {
 	{
 		Point rangeTester = new Point(x, y);
 
-		if (rangeTester.isOutOfBounds(rectangle))
+		Rectangle worldBox = new Rectangle(0, 0, 1024, 1024);
+		if (!worldBox.contains(rangeTester))
 		{
-			System.out.println("Point rejected: (" + x ", " + y ")");
+			System.out.println("Point rejected: (" + x + ", " + y + ")");
 		}
 
 		Point p = quadTree.remove(x, y);
 
 		if (p == null)
 		{
-			System.out.println("Point not found: (" + x + ", " + y ")");
+			System.out.println("Point not found: (" + x + ", " + y + ")");
 			return;
 		}
 

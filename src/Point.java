@@ -16,20 +16,10 @@ public class Point implements Comparable<Point> {
 	{
 		this(name, 0, 0);
 	}
-	
-	public Point()
-	{
-
-	}
 
 	public Point(int x, int y)
 	{
-		this("", x, y);
-	}
-	
-	public boolean hasNonNegativeCoordinates()
-	{
-		return x <= 0 || y <= 0;
+		this(null, x, y);
 	}
 	
 	public boolean hasValidName()
@@ -51,7 +41,6 @@ public class Point implements Comparable<Point> {
 	{
 		return name;
 	}
-
 
 	
 	public boolean equals(Object o)

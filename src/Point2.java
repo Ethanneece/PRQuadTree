@@ -15,8 +15,6 @@ public class Point2 {
 
         tree.insert(new Point("hi", 700, 700));
 
-        int x = tree.regionSearch(worldBox);
-
         ArrayList<Point> points = tree.duplicates();
 
         System.out.println(tree.getHead());
